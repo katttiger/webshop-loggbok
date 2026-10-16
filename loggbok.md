@@ -18,17 +18,22 @@
 - Användaren kan loggas ut.
 - Användarens information sparas i sessionstorage, där information hämtas från en JWT som innehåller information om användaren och dennes rättigheter.
 
+- Sätta upp ramar för det agila arbetet
+- Alla har fått vara scrum master en gång (vi byter av efter varje sprint)
+
+---
+
 ## Sprint 3 – vecka 42
 
 ### Vad jag arbetade med
 
-Denna vecka fokuserade på att bygga en gateway mellan mikrotjänsterna och frontend. Då uppgiften var stor valde vi att jobba tillsammans. Mitt huvudansvar för veckan var att se till att depployment på Render skedde. 
+Denna vecka fokuserade på att bygga en gateway mellan mikrotjänsterna och frontend. Då uppgiften upplevdes vara stor valde vi att jobba tillsammans denna sprint.
 
-Utöver att lägga upp gateway på Render och koppla den till våra mikrotjänster, fick jag även skriva om gateway för att den ska hantera en cookie.
+Vi kunde dock dela upp oss när det kom till att skapa repository, skapa docker image och att skapa instansen på Render. Jag fick ta hand om det sistnämnda samt skriva om gateway så att användarhantering sker med hjälp av en cookie.
 
 ### Eventuella problem och hur jag löste dem
 
-När vi testade våran gateway på Render fick vi ett 401 fel när vi jobbade mot product-mikrotjänsten trots att vi var inloggade.
+Vi har lyckats registrera våra tjänster på Render, men funderar fortfarande på hur det ska gå att koppla ihop det ordentligt.
 
 ### Samarbete och agilt arbete
 
@@ -37,6 +42,8 @@ Jag valdes ut till Scrum Master och ansvarade för att skapa korten i Trello och
 På måndag hade vi, som vanligt, vår Sprint Planing kl. 10. Under mötet gick vi igenom tavlan och veckans uppgifter. Efter att ha förstått upgifterna gjorde vi en Scrum Poker med Fibonnacci-nummer, som motsvarar de nummer som läraren har gett oss, och delade upp uppgiften. Då veckans uppgifter var stora valde vi att jobba tillsammans med kodning, informationsinhämntning, tolking av teori och bidrag med kod. Utifrån detta beskrev vi våra sprintmål.
 
 Varja dag hade vi våra daily scrum klockan 10:00, förutom på tisdagar och torsdagar, då mötet flyttades till efter lektionen. Under daily scrum gick vi igenom vad som skulle göras. Då vi jobbade gemensamt denna vecka behövdes ingen större informationsspriding och daily scrum förvandlades till den kanal vi arbetade tillsammans i.
+
+---
 
 ## Sprint 4 – vecka 43
 
@@ -53,6 +60,8 @@ Varja dag hade vi våra daily scrum klockan 10:00, förutom på tisdagar och tor
 
 - Beskriv tex sprintplanering, daily scrums, annat samarbete kortfattat
 
+---
+
 ## Sprint 5 – vecka 44
 
 ### Vad jag arbetade med
@@ -67,6 +76,8 @@ Varja dag hade vi våra daily scrum klockan 10:00, förutom på tisdagar och tor
 ### Samarbete och agilt arbete
 
 - Beskriv tex sprintplanering, daily scrums, annat samarbete kortfattat
+
+---
 
 ## Sprint 6 – vecka 45
 

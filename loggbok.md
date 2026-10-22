@@ -33,7 +33,7 @@ Vi kunde dock dela upp oss när det kom till att skapa repository, skapa docker 
 
 ### Eventuella problem och hur jag löste dem
 
-Vi har lyckats registrera våra tjänster på Render, men funderar fortfarande på hur det ska gå att koppla ihop det ordentligt.
+Vi har lyckats registrera våra tjänster på Render, men funderar fortfarande på hur det ska gå att koppla ihop det ordentligt. Då vi fortfarande har frågor och fokuserar på funktionalitet väljer vi att skjuta upp denna fråga till senare.
 
 ### Samarbete och agilt arbete
 
@@ -49,16 +49,28 @@ Varja dag hade vi våra daily scrum klockan 10:00, förutom på tisdagar och tor
 
 ### Vad jag arbetade med
 
-- Vilka items i backloggen arbetade du med?
-- Vad blev färdigt, vad blev inte färdigt?
+Veckans fokus låg på tester och att se till att användaren är inloggad även när sidan laddas om.
+
+Under måndagen fokuserade två av oss på den sistnämnda uppgiften och vi lyckades skapa den endpoint som behövdes och förbereda frontend för konverteringen. Dessvärre kom vi inte ända in i mål och behövde lyssna på föreläsningen på tisdagen för att kunna färdigställa uppgiften, nu med hjälp av Jakob. Efter detta är användaren fortsatt inloggad även om sidan laddas om och utloggningen tar bort dennes information.
+
+På onsdagen låg fokus på tester och där var teorin det mest krävande, men vi hjälptes åt och kunde få till de tester som beskrivits i backlogg. Utöver att undersöka hur tester kunde integreras i applikationen skulle vi även sätta upp en testmiljö och skriva tester med mockat data. För detta ändamål använde vi MSW och mockade en server, användare och produkter för att kontrollera att tjänste-lagret i frontend fungerade och att fel hanterades på ett bra sätt.
+
+När vi var klara med det fortsatte vi med att jobba med driftsättning av frontend på Render. Den stora utmaningen var att koppla ihop frontend med gateway.
 
 ### Eventuella problem och hur jag löste dem
 
-- Lite om ev problem och lösningar på dem
+Vi stötte tidigt på patrull vad gällde adminsidorna. När vi uppdaterade till att använda en cookie för inloggning slutade våran admin-naviation att fungera. Resultatet är att admin inte kan nå admin-sidorna och loggas ut. Detta problem försökte vi lösa samtidigt som vi jobbade på metoden för att hämta informaiton om användaren från cookie. Vi misstänker att felet ligger i hur applikationen hanterar omdirigeringen av användaren, vilket innebär att datorn inte läsa av användaren eller att personen loggas ut när sidan renderas om. Vi valde att avsluta våra egna experiment och lyssna på vad läraren hade för tips. Tack vare dem löste vi problemet och kunde gå vidare.
+
+
+På torsdagen bytte vi fokus till deoplyment på Render. Det som ställde till det för oss var att vi på vissa ställen i applikationen hade glömt att byta URL, så vissa services pekade på den lokala porten och inte på instansen på Render. Vi lyckades lösa detta med hjälp av läraren och AI, som båda påpekade att URL:er och cookie stökade till det. 
+
+Vidare misslyckades några av våra mockade tester när vi försökte köra igenom det på GitHub. Vi tänkte först att det var metoderna som spökade men kunde inte komma på vad det var då testet hade gått igenom föregående dag. Vi valde därmed att kontrollera våra miljövariabler i GitHub och på Render, vilket löste ut det hela.
+
 
 ### Samarbete och agilt arbete
 
-- Beskriv tex sprintplanering, daily scrums, annat samarbete kortfattat
+Sprintplaneringen skedde på måndagen. Under mötet flyttade vi över uppgifter från product backlog till våran Trello-tavla och använde Scrum poker för att avgöra vilka kort vi skulle ha i våran sprintplanering. Vi satte upp våra sprintmål och fokus den här veckan låg på datahantering i cookie och att sätta upp tester. Våran ambition var att alla skulle jobba med ett tekniskt kort var och att när man blev klar så skulle man jobba med undersökningarna då de inte påverkade något annat i backlogg.
+
 
 ---
 

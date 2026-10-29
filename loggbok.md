@@ -55,21 +55,17 @@ Under måndagen fokuserade två av oss på den sistnämnda uppgiften och vi lyck
 
 På onsdagen låg fokus på tester och där var teorin det mest krävande, men vi hjälptes åt och kunde få till de tester som beskrivits i backlogg. Utöver att undersöka hur tester kunde integreras i applikationen skulle vi även sätta upp en testmiljö och skriva tester med mockat data. För detta ändamål använde vi MSW och mockade en server, användare och produkter för att kontrollera att tjänste-lagret i frontend fungerade och att fel hanterades på ett bra sätt.
 
-När vi var klara med det fortsatte vi med att jobba med driftsättning av frontend på Render. Den stora utmaningen var att koppla ihop frontend med gateway.
+När vi var klara med det fortsatte vi med att jobba med driftsättning av frontend på Render. Den stora utmaningen var att koppla ihop frontend med gateway, där svaret låg i att packa ihop en ny Docker Image för auth-server.
 
 ### Eventuella problem och hur jag löste dem
 
 Vi stötte tidigt på patrull vad gällde adminsidorna. När vi uppdaterade till att använda en cookie för inloggning slutade våran admin-naviation att fungera. Resultatet är att admin inte kan nå admin-sidorna och loggas ut. Detta problem försökte vi lösa samtidigt som vi jobbade på metoden för att hämta informaiton om användaren från cookie. Vi misstänker att felet ligger i hur applikationen hanterar omdirigeringen av användaren, vilket innebär att datorn inte läsa av användaren eller att personen loggas ut när sidan renderas om. Vi valde att avsluta våra egna experiment och lyssna på vad läraren hade för tips. Tack vare dem löste vi problemet och kunde gå vidare.
 
-På torsdagen bytte vi fokus till deoplyment på Render. Det som ställde till det för oss var att vi på vissa ställen i applikationen hade glömt att byta URL, så vissa services pekade på den lokala porten och inte på instansen på Render. Vi lyckades lösa detta med hjälp av läraren och AI, som båda påpekade att URL:er och cookie stökade till det.
-
-Vidare misslyckades några av våra mockade tester när vi försökte köra igenom det på GitHub. Vi tänkte först att det var metoderna som spökade men kunde inte komma på vad det var då testet hade gått igenom föregående dag. Vi valde därmed att kontrollera våra miljövariabler i GitHub och på Render, vilket löste ut det hela.
+På torsdagen bytte vi fokus till deoplyment på Render. Det som ställde till det för oss var att vi på vissa ställen i applikationen hade glömt att byta URL, så vissa services pekade på den lokala porten och inte på instansen på Render. Vi lyckades lösa detta med hjälp av läraren och AI, som båda påpekade att URL:er och cookie var ansvariga. Efter problemsökning under fredagen isolerade vi problemet till auth-server och kom fram till att den Docker Image som vi använde på Render inte var aktuell och behövde uppdateras.
 
 ### Samarbete och agilt arbete
 
 Sprintplaneringen skedde på måndagen. Under mötet flyttade vi över uppgifter från product backlog till våran Trello-tavla och använde Scrum poker för att avgöra vilka kort vi skulle ha i våran sprintplanering. Vi satte upp våra sprintmål och fokus den här veckan låg på datahantering i cookie och att sätta upp tester. Våran ambition var att alla skulle jobba med ett tekniskt kort var och att när man blev klar så skulle man jobba med undersökningarna då de inte påverkade något annat i backlogg.
-
----
 
 ## Sprint 5 – vecka 44
 
